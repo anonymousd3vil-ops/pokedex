@@ -97,3 +97,9 @@
     box-shadow: none;
     transform: none;
 }
+
+.pokemon-card{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

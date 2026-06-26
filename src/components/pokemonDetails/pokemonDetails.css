@@ -1,0 +1,86 @@
+.pokemon-attribute-wrapper {
+    width: 340px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35),
+        inset 0 0 10px rgba(255,255,255,.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    font-family: "Happy Monkey", system-ui;
+}
+
+.poke-attributes{
+    background: rgba(255,255,255,.08);
+    padding: 14px 18px;
+    border-radius: 14px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:1.05rem;
+    color:white;
+}
+
+.attributeName{
+    font-weight:700;
+    color:#FFD93D;
+    letter-spacing:.5px;
+    min-width:80px;
+}
+
+.poke-image{
+    justify-content:center;
+    background: radial-gradient(circle,#ffffff25,#00000000);
+}
+
+.poke-image img{
+    width:180px;
+    height:180px;
+    object-fit:contain;
+
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,.5));
+}
+
+.poke-type{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.poke-type div{
+    padding:8px 16px;
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#FFCB05,#FF9800);
+    color:#222;
+
+    font-weight:600;
+    text-transform:capitalize;
+
+    box-shadow:0 4px 10px rgba(255,180,0,.4);
+}
+
+.poke-name{
+    font-size:1.4rem;
+    font-weight:bold;
+    text-transform:capitalize;
+
+    justify-content:center;
+}
+
+.poke-weight, .poke-height{
+    justify-content:space-between;
+}

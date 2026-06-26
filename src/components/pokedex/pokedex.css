@@ -1,31 +1,3 @@
-.pokedex-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.pokedex-heading{
-    letter-spacing: 5px;
-    font-family: "Happy Monkey", system-ui;
-    font-weight: 900;
-    font-style: normal;
-    text-transform: uppercase;
-}
 
-.author-name{
-    font-size: 10px;
-    font-weight: 400;
-}
-
-body{
-    background: radial-gradient(
-        circle at top,
-        #1E293B 0%,
-        #111827 40%,
-        #020617 100%
-    );
-    color:#F8FAFC;
-    min-height:100vh;
-}
 

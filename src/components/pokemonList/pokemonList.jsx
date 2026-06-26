@@ -19,7 +19,7 @@ function PokemonList(){
         setIsLoading(true);
         const response = await axios.get(pokedexUrl); //this donwloads the list of first 20 pokemons
 
-        console.log(response);
+        // console.log(response);
 
         setNextUrl(response.data.next);
         setPrevUrl(response.data.previous);
@@ -57,10 +57,10 @@ function PokemonList(){
 
     return (
         <div className="pokemon-list-wrapper">
-            <div className="pokemon-list-heading">Initial Pokemon List</div>
+            <div className="pokemon-list-heading">Pokemon List</div>
             <div className="pokemon-list">
                 {(isLoading) ? <Loading /> : 
-                    pokemonList.map((p)=> <Pokemon name={p.name} image={p.image} key={p.id}/>)    
+                    pokemonList.map((p)=> <Pokemon name={p.name} image={p.image} id={p.id} key={p.id}/>)    
                 }
             </div>
             <div className="controlls">
