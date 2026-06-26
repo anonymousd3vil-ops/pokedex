@@ -1,0 +1,24 @@
+.pokemon-list-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 2rem auto;
+}
+
+.pokemon-list-heading{
+    margin: 20px;
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pokemon-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
