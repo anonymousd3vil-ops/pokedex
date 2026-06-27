@@ -1,4 +1,4 @@
-import pikachu from "./pikachu-running.gif";
+import pikachu from "../../assets/pikachu-running.gif";
 import './loading.css'
 
 function Loading() {
