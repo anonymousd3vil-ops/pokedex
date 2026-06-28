@@ -7,6 +7,7 @@ import PokemonDetailsSupport from "./pokemonDetailsSupport";
 
 function PokemonDetails(){
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(false);
     const {id} = useParams();
     const [pokemon, setPokemon] = useState({})
     // console.log(id);
@@ -15,18 +16,27 @@ function PokemonDetails(){
 
     async function downloadDetailsOfPokemon(){
         setIsLoading(true);
-        const response = await axios.get(pokeDetailUrl);
-        console.log(response.data);
+        setError(false);
 
-        const res = {
-            name: response.data.name,
-            image: response.data.sprites.other.dream_world.front_default,
-            weight: response.data.weight,
-            height: response.data.height,
-            types: response.data.types.map((t) => t.type.name)
+        try {
+            const response = await axios.get(pokeDetailUrl);
+            console.log(response.data);
+
+            const res = {
+                id: response.data.id,
+                name: response.data.name,
+                image: response.data.sprites.other.dream_world.front_default,
+                weight: response.data.weight,
+                height: response.data.height,
+                types: response.data.types.map((t) => t.type.name)
+            }
+
+            setPokemon(res);
+        } catch {
+            setPokemon({});
+            setError(true);
         }
 
-        setPokemon(res);
         setIsLoading(false);
     }
 
@@ -36,8 +46,19 @@ function PokemonDetails(){
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
-    const prevId = Number(id) - 1;
-    const nextId = Number(id) + 1;
+    const currentPokemonId = Number(pokemon.id);
+    const prevId = currentPokemonId > 1 ? currentPokemonId - 1 : null;
+    const nextId = currentPokemonId ? currentPokemonId + 1 : null;
+
+    if(error){
+        return (
+            <div className="main-wrapper">
+                <div className="pokemon-attribute-wrapper">
+                    <div className="poke-name poke-attributes">Pokemon doesnot existsOr Check the Spelling</div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="main-wrapper">
