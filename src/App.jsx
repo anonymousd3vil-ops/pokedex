@@ -2,7 +2,7 @@ import Search from "./components/search/search"
 import CostomRoutes from "./routes/costumRoutes"
 import { Link } from "react-router-dom"
 import './app.css'
-import Footer from "./components/footer/footer"
+import Footer from '../src/components/footer/footer.jsx'
 
 function App() {
   return (
