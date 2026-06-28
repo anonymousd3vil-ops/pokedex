@@ -24,11 +24,11 @@ function Footer() {
             <div className="footer-3 footer-section">
                 <p>My Social Profiles</p>
                 <p>
-                    <a href="https://www.linkedin.com/in/vivek-pat3l/"><CiLinkedin /></a>
-                    <a href="https://www.instagram.com/vivek_pat3l/"><CiInstagram /></a>
-                    <a href="https://github.com/anonymousd3vil-ops"><FaGithub /></a>
-                    <a href="https://leetcode.com/u/vivek_pat3l/"><SiLeetcode /></a>
-                    <a href="https://vivekpatelportfolio.vercel.app/"><TbWorldWww /></a>
+                    <a href="https://www.linkedin.com/in/vivek-pat3l/" target="_blank"><CiLinkedin /></a>
+                    <a href="https://www.instagram.com/vivek_pat3l/" target="_blank"><CiInstagram /></a>
+                    <a href="https://github.com/anonymousd3vil-ops" target="_blank"><FaGithub /></a>
+                    <a href="https://leetcode.com/u/vivek_pat3l/" target="_blank"><SiLeetcode /></a>
+                    <a href="https://vivekpatelportfolio.vercel.app/" target="_blank"><TbWorldWww /></a>
                 </p>
             </div>
         </div>
