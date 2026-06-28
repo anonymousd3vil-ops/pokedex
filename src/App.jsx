@@ -2,6 +2,7 @@ import Search from "./components/search/search"
 import CostomRoutes from "./routes/costumRoutes"
 import { Link } from "react-router-dom"
 import './app.css'
+import Footer from "./components/footer/footer"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         </Link>
         <Search />
         <CostomRoutes />
+        <Footer />
       </div>
     </>
   )
